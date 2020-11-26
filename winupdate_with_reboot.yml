@@ -1,15 +1,18 @@
 ---
-- name: Install Windows Update and wait 5 minutes
-  win_updates:
-    category_names:
-      - CriticalUpdates
-      - DefinitionUpdates
-      - SecurityUpdates
-      - ServicePacks
-      - UpdateRollups
-      - Updates
-    reboot: yes
-    reboot_timeout: 300
-    log_path: C:\ansible_wu.txt
-
-...
+- hosts: all
+  gather_facts: no
+  tasks:
+  - name: Install Windows Update and wait 5 minutes
+    win_updates:
+      category_names:
+        - CriticalUpdates
+        - DefinitionUpdates
+        - SecurityUpdates
+        - ServicePacks
+        - UpdateRollups
+        - Updates
+      reboot: yes
+      reboot_timeout: 300
+      log_path: C:\ansible_wu.txt
+ 
+ ...
