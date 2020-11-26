@@ -1,0 +1,13 @@
+---
+- hosts: all
+#  gather_facts: false
+  tasks:
+    - name: Get the current date.
+      win_shell: Get-Date
+      register: current_date
+      changed_when: false
+
+    - name: Print the current date.
+      debug:
+        msg: "{{ current_date.stdout }}"
+

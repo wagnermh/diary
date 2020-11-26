@@ -1,0 +1,25 @@
+- hosts: all
+  gather_facts: no
+  tasks:
+  - name: Network Tunning - Melhorar Quantidade Maxima de Conexoes 
+    win_regedit:
+      key: HKLM:\System\CurrentControlSet\Services\Tcpip\Parameters
+      value: MaxUserPort
+      datatype: dword
+      data: 65534
+  
+  - name: Network Tunning - Limitar Tempo de Delay de Conexoes de Espera
+    win_regedit:
+      key: HKLM:\System\CurrentControlSet\Services\Tcpip\Parameters
+      value: TcpTimedWaitDelay
+      datatype: dword
+      data: 20
+  
+  - name: Network Tunning - Aumento de Quantidade Maxima de Conexoes TCP
+    win_regedit:
+      key: HKLM:\System\CurrentControlSet\Services\Tcpip\Parameters
+      value: TcpNumConnections
+      datatype: dword
+      data: 16777214
+
+...
