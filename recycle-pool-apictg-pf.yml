@@ -1,0 +1,17 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+    - name: Task Recycle API Catalogo PF
+      win_iis_webapppool:
+        name: catalogo.pontofrio.com.br
+        state: restarted
+      tags: ctgpf
+
+    - name: Task Recycle API Catalogo V2 PF
+      win_iis_webapppool:
+        name: catalogo.pontofrio.com.br_v2
+        state: restarted
+      tags: ctgv2pf
+
+...

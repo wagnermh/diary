@@ -1,0 +1,11 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+    - name: Task Recycle Busca EX
+      win_iis_webapppool:
+        name: buscando2.extra.com.br
+        state: restarted
+      tags: buscaex
+
+...

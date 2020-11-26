@@ -1,0 +1,17 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+    - name: Task Recycle API Carrinho CB
+      win_iis_webapppool:
+        name: carrinho.casasbahia.com.br
+        state: restarted
+      tags: carrinhocb
+
+    - name: Task Recycle API Carrinho-API CB
+      win_iis_webapppool:
+        name: carrinho.casasbahia.com.br_api
+        state: restarted
+      tags: carrinhoapicb
+
+...

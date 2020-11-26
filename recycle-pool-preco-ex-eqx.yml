@@ -1,0 +1,35 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+    - name: Task Recycle API Preco EX
+      win_iis_webapppool:
+        name: preco.api-extra.com.br 
+        state: restarted
+      tags: precoex
+
+    - name: Task Recycle API Preco V1 EX 
+      win_iis_webapppool:
+        name: preco.api-extra.com.br_v1
+        state: restarted
+      tags: precov1ex
+
+    - name: Task Recycle API Preco V2 EX
+      win_iis_webapppool:
+        name: preco.api-extra.com.br_v2
+        state: restarted
+      tags: precov2ex
+
+    - name: Task Recycle API Preco V3 EX
+      win_iis_webapppool:
+        name: preco.api-extra.com.br_v3
+        state: restarted
+      tags: precov3ex
+
+    - name: Task Recycle API Preco SLI EX
+      win_iis_webapppool:
+        name: sli.extra.com.br
+        state: restarted
+      tags: precosliex
+
+...

@@ -1,0 +1,11 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks: 
+    - name: Task Recycle Api de Atendimento
+      win_iis_webapppool:
+        name: atendimento.api-viavarejo.com.br
+        state: restarted
+      tags: restarted
+
+...

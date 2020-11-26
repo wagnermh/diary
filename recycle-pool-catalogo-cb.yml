@@ -1,0 +1,17 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+    - name: Task Recycle API Catalogo CB
+      win_iis_webapppool:
+        name: catalogo.casasbahia.com.br
+        state: restarted
+      tags: ctgcb
+
+    - name: Task Recycle API Catalogo V2 CB
+      win_iis_webapppool:
+        name: catalogo.casasbahia.com.br_v2
+        state: restarted
+      tags: ctgv2cb
+
+...

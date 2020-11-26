@@ -1,0 +1,17 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+    - name: Task Recycle API Carrinho EX
+      win_iis_webapppool:
+        name: carrinho.extra.com.br
+        state: restarted
+      tags: carrinhoex
+
+    - name: Task Recycle API Carrinho-API EX
+      win_iis_webapppool:
+        name: carrinho.extra.com.br_api
+        state: restarted
+      tags: carrinhoapiex
+
+...

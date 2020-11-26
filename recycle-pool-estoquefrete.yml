@@ -1,0 +1,35 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+    - name: Task Recycle API Servicos GPA (CORP)
+      win_iis_webapppool:
+        name: servicos.gpa.net.br
+        state: restarted
+      tags: servgpa
+
+    - name: Task Recycle API Servicos SuaNova (CORP)
+      win_iis_webapppool:
+        name: servicos.suanova.com
+        state: restarted
+      tags: servcorp
+
+    - name: Task Recycle API Servico Inscricao Estadual SuaNova (CORP)
+      win_iis_webapppool:
+        name: servico.inscricaoestadual.suanova.com
+        state: restarted
+      tags: inscricao
+
+    - name: Task Recycle API Servicos Admin SuaNova (CORP)
+      win_iis_webapppool:
+        name: servicos.admin.suanova.com.br
+        state: restarted
+      tags: servadmin
+
+    - name: Task Recycle API Corp Nova PontoCom (CORP)
+      win_iis_webapppool:
+        name: corp.novapontocom.com.br
+        state: restarted
+      tags: corp
+
+...

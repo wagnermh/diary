@@ -1,0 +1,59 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+    - name: Task Recycle API Admin PF
+      win_iis_webapppool:
+        name: admin.pontofrio.com.br
+        state: restarted
+      tags: admincorp
+
+    - name: Task Recycle API Imagens PF
+      win_iis_webapppool:
+        name: imagens.pontofrio.com.br
+        state: restarted
+      tags: imagens
+
+    - name: Task Recycle API Servicos Loja Televendas PF
+      win_iis_webapppool:
+        name: loja.servicostelevendas.pontofrio.com.br
+        state: restarted
+      tags: slt
+
+    - name: Task Recycle API Produto PF
+      win_iis_webapppool:
+        name: produto.pontofrio.com.br
+        state: restarted
+      tags: produto
+
+    - name: Task Recycle API Proxy PF
+      win_iis_webapppool:
+        name: proxy.pontofrio.com.br
+        state: restarted
+      tags: proxy
+
+    - name: Task Recycle API Servicos Admin PF
+      win_iis_webapppool:
+        name: servicos.admin.pontofrio.com
+        state: restarted
+      tags: servadmin
+
+    - name: Task Recycle API Servicos PF
+      win_iis_webapppool:
+        name: servicos.pontofrio.com.br
+        state: restarted
+      tags: servicos
+
+    - name: Task Recycle API Servicos Loja (API) PF
+      win_iis_webapppool:
+        name: servicos.pontofrio.com.br_loja
+        state: restarted
+      tags: servloja
+
+    - name: Task Recycle API Admin Decorados PF
+      win_iis_webapppool:
+        name: servicos.pontofrio2.com.br
+        state: restarted
+      tags: decorados
+
+...

@@ -1,0 +1,24 @@
+---
+
+- hosts: all
+  gather_facts: no
+  tasks:
+    - name: Task Pontofrio WWW
+      win_iis_webapppool:
+        name: www.pontofrio.com.br
+        state: restarted
+      tags: www
+    
+    - name: Task Pontofrio WWW_C 
+      win_iis_webapppool:
+        name: www.pontofrio.com.br_c
+        state: restarted
+      tags: www_c
+    
+    - name: Task Pontofrio Ponto Retirada
+      win_iis_webapppool:
+        name: www.pontofrio.com.br_PontoRetirada
+        state: restarted
+      tags: pontoretirada
+
+...

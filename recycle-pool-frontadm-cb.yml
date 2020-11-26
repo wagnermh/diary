@@ -1,0 +1,65 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+    - name: Task Recycle API Admin CB
+      win_iis_webapppool:
+        name: admin.casasbahia.com.br
+        state: restarted
+      tags: admincorp
+
+    - name: Task Recycle API Admin Busca CB
+      win_iis_webapppool:
+        name: adminbusca.casasbahia.com.br
+        state: restarted
+      tags: atendcorp
+
+    - name: Task Recycle API Produto CB
+      win_iis_webapppool:
+        name: produto.casasbahia.com.br
+        state: restarted
+      tags: atendcorp
+
+    - name: Task Recycle API Proxy CB
+      win_iis_webapppool:
+        name: proxy.casasbahia.com.br
+        state: restarted
+      tags: atendcorp
+
+    - name: Task Recycle API Servicos Admin CB
+      win_iis_webapppool:
+        name: servicos.admin.casasbahia.com.br
+        state: restarted
+      tags: atendcorp
+
+    - name: Task Recycle API Servicos CB
+      win_iis_webapppool:
+        name: servicos.casasbahia.com.br
+        state: restarted
+      tags: atendcorp
+
+    - name: Task Recycle API Servicos Loja (API) CB
+      win_iis_webapppool:
+        name: servicos.casasbahia.com.br_loja
+        state: restarted
+      tags: atendcorp
+
+    - name: Task Recycle API Servicos Loja CB
+      win_iis_webapppool:
+        name: servicosloja.casasbahiatelevendas.com.br
+        state: restarted
+      tags: atendcorp
+
+    - name: Task Recycle API Admin Decorados CB
+      win_iis_webapppool:
+        name: admindecorados.casasbahia.com.br
+        state: restarted
+      tags: atendcorp
+
+    - name: Task Recycle API Imagem CB
+      win_iis_webapppool:
+        name: imagem.casasbahia.com.br
+        state: restarted
+      tags: atendcorp
+
+...

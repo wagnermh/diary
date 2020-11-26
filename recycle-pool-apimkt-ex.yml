@@ -1,0 +1,17 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+    - name: Task Recycle API Marketing EX
+      win_iis_webapppool:
+        name: marketing.api-extra.com.br
+        state: restarted
+      tags: mktapiex
+
+    - name: Task Recycle API Marketing V3 EX
+      win_iis_webapppool:
+        name: marketing.api-extra.com.br_v3
+        state: restarted
+      tags: mktapiv3ex
+
+...

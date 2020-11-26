@@ -1,0 +1,35 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+    - name: Task Recycle API OMS (CNOVA)
+      win_iis_webapppool:
+        name: oms-corporativo.api-cnova.com.br
+        state: restarted
+      tags: omscnova
+
+    - name: Task Recycle API OMS (VIA)
+      win_iis_webapppool:
+        name: oms-corporativo.api.viavarejo.com.br
+        state: restarted
+      tags: omsvia
+
+    - name: Task Recycle API OMS Distribuicao Pedidos V1
+      win_iis_webapppool:
+        name: oms-corporativo.api-cnova.com.br_distribuicaopedidos_v1
+        state: restarted
+      tags: omsdistv1
+
+    - name: Task Recycle API OMS Fulfillment V1
+      win_iis_webapppool:
+        name: oms-corporativo.api-cnova.com.br_fulfillment_v1
+        state: restarted
+      tags: omsfulv1
+
+    - name: Task Recycle API OMS Inventario V1
+      win_iis_webapppool:
+        name: oms-corporativo.api-cnova.com.br_inventario_v1
+        state: restarted
+      tags: omsinvv1
+
+...

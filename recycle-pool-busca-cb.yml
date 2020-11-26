@@ -1,0 +1,11 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+    - name: Task Recycle Busca CB
+      win_iis_webapppool:
+        name: buscas2.casasbahia.com.br
+        state: restarted
+      tags: buscacb
+
+...

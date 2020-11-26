@@ -1,0 +1,17 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+    - name: Task Recycle API Loja PF
+      win_iis_webapppool:
+        name: loja.api-pontofrio.com.br
+        state: restarted
+      tags: lojaapipf
+
+    - name: Task Recycle API Loja V3 PF
+      win_iis_webapppool:
+        name: loja.api-pontofrio.com.br_v3
+        state: restarted
+      tags: lojaapiv3pf
+
+...

@@ -1,0 +1,23 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+    - name: Task Recycle API Admin Corp (VIA)
+      win_iis_webapppool:
+        name: admincorp.viavarejo.com.br
+        state: restarted
+      tags: admincorp
+
+    - name: Task Recycle API Atendimento Corp (Cnova)
+      win_iis_webapppool:
+        name: atendimento-api.cnova.com
+        state: restarted
+      tags: atendcorp
+
+    - name: Task Recycle API Televendas Corp (Via)
+      win_iis_webapppool:
+        name: televendas.viavarejo.com.br
+        state: restarted
+      tags: televendas
+
+...

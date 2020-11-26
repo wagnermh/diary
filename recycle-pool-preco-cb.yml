@@ -1,0 +1,35 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+    - name: Task Recycle API Preco CB
+      win_iis_webapppool:
+        name: preco.api-casasbahia.com.br 
+        state: restarted
+      tags: precocb
+
+    - name: Task Recycle API Preco V1 CB 
+      win_iis_webapppool:
+        name: preco.api-casasbahia.com.br_v1
+        state: restarted
+      tags: precov1cb
+
+    - name: Task Recycle API Preco V2 CB
+      win_iis_webapppool:
+        name: preco.api-casasbahia.com.br_v2
+        state: restarted
+      tags: precov2cb
+
+    - name: Task Recycle API Preco V3 CB
+      win_iis_webapppool:
+        name: preco.api-casasbahia.com.br_v3
+        state: restarted
+      tags: precov3cb
+
+    - name: Task Recycle API Preco SLI CB
+      win_iis_webapppool:
+        name: sli.casasbahia.com.br
+        state: restarted
+      tags: precoslicb
+
+...

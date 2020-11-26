@@ -1,0 +1,17 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+    - name: Task Recycle API Carrinho PF
+      win_iis_webapppool:
+        name: carrinho.pontofrio.com.br
+        state: restarted
+      tags: carrinhopf
+
+    - name: Task Recycle API Carrinho-API PF
+      win_iis_webapppool:
+        name: carrinho.pontofrio.com.br_api
+        state: restarted
+      tags: carrinhoapipf
+
+...

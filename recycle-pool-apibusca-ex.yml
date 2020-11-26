@@ -1,0 +1,11 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+    - name: Task Recycle API Busca EX
+      win_iis_webapppool:
+        name: busca.api-extra.com.br
+        state: restarted
+      tags: buscaapiex
+
+...

@@ -1,0 +1,59 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+    - name: Task Recycle API Admin EX
+      win_iis_webapppool:
+        name: admin.extra.com.br
+        state: restarted
+      tags: admincorp
+
+    - name: Task Recycle API Imagens EX
+      win_iis_webapppool:
+        name: imagem.extra.com.br
+        state: restarted
+      tags: imagens
+
+    - name: Task Recycle API M-WS EX
+      win_iis_webapppool:
+        name: m-ws.extra.com.br
+        state: restarted
+      tags: mws
+
+    - name: Task Recycle API Produto EX
+      win_iis_webapppool:
+        name: produto.extra.com.br
+        state: restarted
+      tags: produto
+
+    - name: Task Recycle API Proxy EX
+      win_iis_webapppool:
+        name: proxy.extra.com.br
+        state: restarted
+      tags: proxy
+
+    - name: Task Recycle API Servicos Admin EX
+      win_iis_webapppool:
+        name: servicos.admin.extra.com.br
+        state: restarted
+      tags: servadmin
+
+    - name: Task Recycle API Servicos EX
+      win_iis_webapppool:
+        name: servicos.extra.com.br
+        state: restarted
+      tags: servicos
+
+    - name: Task Recycle API Servicos Loja (API) EX
+      win_iis_webapppool:
+        name: servicos.extra.com.br_loja
+        state: restarted
+      tags: atendcorp
+
+    - name: Task Recycle API Servicos Loja EX
+      win_iis_webapppool:
+        name: servicosloja.extratelevendas.com.br
+        state: restarted
+      tags: slt
+
+...

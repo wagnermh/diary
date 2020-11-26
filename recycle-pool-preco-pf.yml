@@ -1,0 +1,35 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+    - name: Task Recycle API Preco PF
+      win_iis_webapppool:
+        name: preco.api-pontofrio.com.br 
+        state: restarted
+      tags: precopf
+
+    - name: Task Recycle API Preco V1 PF 
+      win_iis_webapppool:
+        name: preco.api-pontofrio.com.br_v1
+        state: restarted
+      tags: precov1pf
+
+    - name: Task Recycle API Preco V2 PF
+      win_iis_webapppool:
+        name: preco.api-pontofrio.com.br_v2
+        state: restarted
+      tags: precov2pf
+
+    - name: Task Recycle API Preco V3 PF
+      win_iis_webapppool:
+        name: preco.api-pontofrio.com.br_v3
+        state: restarted
+      tags: precov3pf
+
+    - name: Task Recycle API Preco SLI PF
+      win_iis_webapppool:
+        name: sli.pontofrio.com.br
+        state: restarted
+      tags: precoslipf
+
+...

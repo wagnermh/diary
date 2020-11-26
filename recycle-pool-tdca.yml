@@ -1,0 +1,67 @@
+---
+
+- hosts: all
+  gather_facts: no
+  tasks:
+    - name: include task barateiro
+      win_iis_webapppool:
+        name: servicosloja.barateiro.com.br
+        state: restarted
+      tags: restarted
+    
+    - name: include task casasbahia
+      win_iis_webapppool:
+        name: servicosloja.casasbahia.com.br
+        state: restarted
+      tags: restarted
+    
+    - name: include task tdca novapontocom
+      win_iis_webapppool:
+        name: tdca.novapontocom.com.br
+        state: restarted
+      tags: restarted
+    
+    - name: include task extra
+      win_iis_webapppool:
+        name: servicosloja.extra.com.br
+        state: restarted
+      tags: restarted
+    
+    - name: include task loja fuji
+      win_iis_webapppool:
+        name: servicosloja.lojafuji.com.br
+        state: restarted
+      tags: restarted
+    
+    - name: include task go to shop
+      win_iis_webapppool:
+        name: servicosloja.gotoshop.com.br
+        state: restarted
+      tags: restarted
+    
+    - name: include task loja hp
+      win_iis_webapppool:
+        name: servicosloja.lojahp.com.br
+        state: restarted
+      tags: restarted
+    
+    - name: include task loja hp empresas
+      win_iis_webapppool:
+        name: servicosloja.lojahpempresas.com.br
+        state: restarted
+      tags: restarted
+    
+    - name: include task pontofrio
+      win_iis_webapppool:
+        name: servicosloja.pontofrio.com.br
+        state: restarted
+      tags: restarted
+    
+    - name: include task vvatacado
+      win_iis_webapppool:
+        name: servicosloja.vvatacado.com.br
+        state: restarted
+      tags: restarted
+    
+...
+

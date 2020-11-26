@@ -1,0 +1,276 @@
+---
+- hosts: all
+  gather_facts: false
+  tasks:
+    - name: Task Recycle API B2C EX
+      win_iis_webapppool:
+        name: api-b2c.extra.com.br 
+        state: restarted
+      tags: apib2c
+
+    - name: Task Recycle API Catalogo V2 EX
+      win_iis_webapppool:
+        name: api-b2c.extra.com.br_catalogo_v2
+        state: restarted
+      tags: ctgv2
+
+    - name: Task Recycle API Corporativo V2 EX
+      win_iis_webapppool:
+        name: api-b2c.extra.com.br_corporativo_v2
+        state: restarted
+      tags: corpv2
+
+    - name: Task Recycle API B2C Gateway V1 EX
+      win_iis_webapppool:
+        name: api-b2c.extra.com.br_gateway_v1
+        state: restarted
+      tags: gwb2cv1
+
+    - name: Task Recycle API Loja V3 EX
+      win_iis_webapppool:
+        name: api-b2c.extra.com.br_loja_v3
+        state: restarted
+      tags: lojav3
+
+    - name: Task Recycle API Marketing V3 EX
+      win_iis_webapppool:
+        name: api-b2c.extra.com.br_marketing_v3
+        state: restarted
+      tags: mktv3
+
+    - name: Task Recycle API Meios De Pagamentos V1 EX
+      win_iis_webapppool:
+        name: api-b2c.extra.com.br_meiosdepagamento_v1
+        state: restarted
+      tags: mdpv1
+
+    - name: Task Recycle API Meios De Pagamentos V2 EX
+      win_iis_webapppool:
+        name: api-b2c.extra.com.br_meiosdepagamento_v2
+        state: restarted
+      tags: mdpv2
+
+    - name: Task Recycle API Meios De Pagamentos V3 EX
+      win_iis_webapppool:
+        name: api-b2c.extra.com.br_meiosdepagamento_v3
+        state: restarted
+      tags: mdpv3
+
+    - name: Task Recycle API Meios De Pagamentos V4 EX
+      win_iis_webapppool:
+        name: api-b2c.extra.com.br_meiosdepagamento_v4
+        state: restarted
+      tags: mdpv4
+
+    - name: Task Recycle API B2C Utilitarios V1 EX
+      win_iis_webapppool:
+        name: api-b2c.extra.com.br_utilitario_v1
+        state: restarted
+      tags: utilv1
+
+    - name: Task Recycle API Track EX
+      win_iis_webapppool:
+        name: api-track.extra.com.br
+        state: restarted
+      tags: track
+
+    - name: Task Recycle API Automotivos EX
+      win_iis_webapppool:
+        name: automotivos.api-extra.com.br
+        state: restarted
+      tags: auto
+
+    - name: Task Recycle API Automotivos V1 EX
+      win_iis_webapppool:
+        name: automotivos.api-extra.com.br_v1
+        state: restarted
+      tags: autov1
+
+    - name: Task Recycle API Avaliacoes EX
+      win_iis_webapppool:
+        name: avaliacoes.api-extra.com.br
+        state: restarted
+      tags: aval
+
+    - name: Task Recycle API Avaliacoes EX
+      win_iis_webapppool:
+        name: avaliacoes.api-extra.com.br_v1
+        state: restarted
+      tags: avalv1
+
+    - name: Task Recycle API Carne OnLine EX
+      win_iis_webapppool:
+        name: carneonline.extra.com.br
+        state: restarted
+      tags: carne
+
+    - name: Task Recycle API Catalogo EX
+      win_iis_webapppool:
+        name: catalogo.extra.com.br
+        state: restarted
+      tags: ctg
+
+    - name: Task Recycle API Catalogo V2 EX
+      win_iis_webapppool:
+        name: catalogo.extra.com.br_v2
+        state: restarted
+      tags: ctgv2
+
+    - name: Task Recycle API Catalogo-API EX
+      win_iis_webapppool:
+        name: catalogo.api-extra.com.br
+        state: restarted
+      tags: ctgapi
+
+    - name: Task Recycle API Catalogo-API V2 EX
+      win_iis_webapppool:
+        name: catalogo.api-extra.com.br_v2
+        state: restarted
+      tags: ctgapiv2
+
+    - name: Task Recycle API Categoria EX
+      win_iis_webapppool:
+        name: categoria.api-extra.com.br
+        state: restarted
+      tags: categoria
+
+    - name: Task Recycle API Entrega EX
+      win_iis_webapppool:
+        name: entrega.api-extra.com.br
+        state: restarted
+      tags: ent
+
+    - name: Task Recycle API Entrega-API EX
+      win_iis_webapppool:
+        name: entrega.api-extra.com.br_v1
+        state: restarted
+      tags: entapi
+
+    - name: Task Recycle API Gateway EX
+      win_iis_webapppool:
+        name: gateway.extra.com.br
+        state: restarted
+      tags: gw
+
+    - name: Task Recycle API Gateway V1 EX
+      win_iis_webapppool:
+        name: gateway.extra.com.br_v1
+        state: restarted
+      tags: gwv1
+
+    - name: Task Recycle API Integracao Certificado EX
+      win_iis_webapppool:
+        name: integracaocertificado.api-extra.com.br
+        state: restarted
+      tags: cert
+
+    - name: Task Recycle API Integracao Certificado EX
+      win_iis_webapppool:
+        name: integracaocertificado.api-extra.com.br_v1
+        state: restarted
+      tags: certv1
+
+    - name: Task Recycle API Listas EX
+      win_iis_webapppool:
+        name: listas.api-extra.com.br
+        state: restarted
+      tags: listas
+
+    - name: Task Recycle API Logistica EX
+      win_iis_webapppool:
+        name: logistica.api-extra.com.br
+        state: restarted
+      tags: log
+
+    - name: Task Recycle API Logistica V1 EX
+      win_iis_webapppool:
+        name: logistica.api-extra.com.br_v1
+        state: restarted
+      tags: logv1
+
+    - name: Task Recycle API Loja V3 EX
+      win_iis_webapppool:
+        name: loja.extra.com.br_v3
+        state: restarted
+      tags: lojav3
+
+    - name: Task Recycle API Marketing EX
+      win_iis_webapppool:
+        name: marketing.extra.com.br
+        state: restarted
+      tags: mkt
+
+    - name: Task Recycle API Marketing V3 EX
+      win_iis_webapppool:
+        name: marketing.extra.com.br_v3
+        state: restarted
+      tags: mktv3
+
+    - name: Task Recycle API Mopla EX
+      win_iis_webapppool:
+        name: mopla.api-extra.com.br
+        state: restarted
+      tags: mopla
+
+    - name: Task Recycle API Precificacao EX
+      win_iis_webapppool:
+        name: precificacao.api-extra.com.br
+        state: restarted
+      tags: prec
+
+    - name: Task Recycle API Precificacao V1 EX
+      win_iis_webapppool:
+        name: precificacao.api-extra.com.br_v1
+        state: restarted
+      tags: precv1
+
+    - name: Task Recycle API Seguros OnLine EX
+      win_iis_webapppool:
+        name: segurosonline-api.extra.com.br
+        state: restarted
+      tags: seguros
+
+    - name: Task Recycle API Seguros OnLine Certificado V1 EX
+      win_iis_webapppool:
+        name: segurosonline-api.extra.com.br_certificado_v1
+        state: restarted
+      tags: segcertv1
+
+    - name: Task Recycle API Seguros OnLine Dado Complementar V1 EX
+      win_iis_webapppool:
+        name: segurosonline-api.extra.com.br_dadocomplementar_v1
+        state: restarted
+      tags: segdadov1
+
+    - name: Task Recycle API Seguros OnLine Enquadramento V1 EX
+      win_iis_webapppool:
+        name: segurosonline-api.extra.com.br_enquadramento_v1
+        state: restarted
+      tags: segenqv1
+
+    - name: Task Recycle API Utilitarios EX
+      win_iis_webapppool:
+        name: utilitario.extra.com.br
+        state: restarted
+      tags: utilitario
+
+    - name: Task Recycle API Utilitarios V1 EX
+      win_iis_webapppool:
+        name: utilitario.extra.com.br_v1
+        state: restarted
+      tags: utilitariov1
+
+    - name: Task Recycle API Bebes EX
+      win_iis_webapppool:
+        name: bebes.api-extra.com.br
+        state: restarted
+      tags: bebes
+
+    - name: Task Recycle API Marca EX
+      win_iis_webapppool:
+        name: marca.api-extra.com.br
+        state: restarted
+      tags: marca
+
+...
+

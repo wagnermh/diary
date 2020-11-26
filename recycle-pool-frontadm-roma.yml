@@ -1,0 +1,35 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+    - name: Task Recycle API Admin Corp (GPA)
+      win_iis_webapppool:
+        name: admin.gpa.net.br
+        state: restarted
+      tags: admincorp
+
+    - name: Task Recycle API Atendimento Corp (Cnova)
+      win_iis_webapppool:
+        name: atendimento-api.cnova.com
+        state: restarted
+      tags: atendcorp
+
+    - name: Task Recycle API Televendas Corp (Cnova)
+      win_iis_webapppool:
+        name: televendas.cnova.com
+        state: restarted
+      tags: televendas
+
+    - name: Task Recycle API Televendas Corp (VIA)
+      win_iis_webapppool:
+        name: televendas.viavarejo.com.br
+        state: restarted
+      tags: televendasvia
+
+    - name: Task Recycle API Loja do Colaborador
+      win_iis_webapppool:
+        name: www.lojadocolaborador.com.br
+        state: restarted
+      tags: lojadocolaborador
+
+...

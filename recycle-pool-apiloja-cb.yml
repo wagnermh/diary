@@ -1,0 +1,17 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+    - name: Task Recycle API Loja CB
+      win_iis_webapppool:
+        name: loja.api-casasbahia.com.br
+        state: restarted
+      tags: lojaapicb
+
+    - name: Task Recycle API Loja V3 CB
+      win_iis_webapppool:
+        name: loja.api-casasbahia.com.br_v3
+        state: restarted
+      tags: lojaapiv3cb
+
+...

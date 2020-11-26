@@ -1,0 +1,113 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+    - name: Task Recycle API Admin Shopping Parceiros CB (CORP)
+      win_iis_webapppool:
+        name: admin-shoppingparceiros.casasbahia.com.br
+        state: restarted
+      tags: aspcb
+
+    - name: Task Recycle API Admin Shopping Parceiros EX (CORP) 
+      win_iis_webapppool:
+        name: admin-shoppingparceiros.extra.com.br
+        state: restarted
+      tags: aspex
+
+    - name: Task Recycle API Admin Shopping Parceiros PF (CORP) 
+      win_iis_webapppool:
+        name: admin-shoppingparceiros.pontofrio.com.br
+        state: restarted
+      tags: asppf
+
+    - name: Task Recycle API B2B Mais Pontos (CORP) 
+      win_iis_webapppool:
+        name: api-b2b.maispontos.com.br
+        state: restarted
+      tags: maispontosb2b
+
+    - name: Task Recycle API Corporativo Cnova (CORP) 
+      win_iis_webapppool:
+        name: corporativo.api-cnova.com.br
+        state: restarted
+      tags: corp
+
+    - name: Task Recycle API Corporativo V2 Cnova (CORP)
+      win_iis_webapppool:
+        name: corporativo.api-cnova.com.br_v2
+        state: restarted
+      tags: corpv2
+
+    - name: Task Recycle API ERP (CORP) 
+      win_iis_webapppool:
+        name: erp.cnova.com.br
+        state: restarted
+      tags: erp
+
+    - name: Task Recycle API ERP VIA (CORP)
+      win_iis_webapppool:
+        name: erp.via.varejo.com.br
+        state: restarted
+      tags: erpvia
+
+    - name: Task Recycle API Gateway Cnova (CORP)
+      win_iis_webapppool:
+        name: gateway.api-cnova.com.br
+        state: restarted
+      tags: gw
+
+    - name: Task Recycle API Gateway Cnova V1 (CORP)
+      win_iis_webapppool:
+        name: gateway.api-cnova.com.br_v1
+        state: restarted
+      tags: gwv1
+
+    - name: Task Recycle API Geolocalizacao Cnova (CORP)
+      win_iis_webapppool:
+        name: geolocalizacao.api-cnova.com.br
+        state: restarted
+      tags: geo
+
+    - name: Task Recycle API Geolocalizacao Cnova V1 (CORP)
+      win_iis_webapppool:
+        name: geolocalizacao.api-cnova.com.br_v1
+        state: restarted
+      tags: geov1
+
+    - name: Task Recycle API Marketplace Cnova (CORP)
+      win_iis_webapppool:
+        name: marketplace.api-cnova.com.br
+        state: restarted
+      tags: mkt
+
+    - name: Task Recycle API Marketplace Cnova Portal (CORP)
+      win_iis_webapppool:
+        name: marketplace.api-cnova.com.br_portal
+        state: restarted
+      tags: mktp
+
+    - name: Task Recycle API Marketplace Cnova V1 (CORP)
+      win_iis_webapppool:
+        name: marketplace.api-cnova.com.br_v1
+        state: restarted
+      tags: mktv1
+
+    - name: Task Recycle API OMS Catalogo Cnova (CORP)
+      win_iis_webapppool:
+        name: omscatalogo.api-cnova.com.br
+        state: restarted
+      tags: oms
+
+    - name: Task Recycle API OMS Catalogo Cnova V1 (CORP)
+      win_iis_webapppool:
+        name: omscatalogo.api-cnova.com.br_v1
+        state: restarted
+      tags: omsv1
+
+    - name: Task Recycle API Seguranca Cnova (CORP)
+      win_iis_webapppool:
+        name: seguranca.nova.com 
+        state: restarted
+      tags: seg
+
+...

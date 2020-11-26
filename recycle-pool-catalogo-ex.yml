@@ -1,0 +1,17 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+    - name: Task Recycle API Catalogo EX
+      win_iis_webapppool:
+        name: catalogo.extra.com.br
+        state: restarted
+      tags: ctgex
+
+    - name: Task Recycle API Catalogo V2 EX
+      win_iis_webapppool:
+        name: catalogo.extra.com.br_v2
+        state: restarted
+      tags: ctgv2ex
+
+...

@@ -1,0 +1,17 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+    - name: Task Recycle API Loja EX
+      win_iis_webapppool:
+        name: loja.api-extra.com.br
+        state: restarted
+      tags: lojaapiex
+
+    - name: Task Recycle API Loja V3 EX
+      win_iis_webapppool:
+        name: loja.api-extra.com.br_v3
+        state: restarted
+      tags: lojaapiv3ex
+
+...

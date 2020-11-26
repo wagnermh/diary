@@ -1,0 +1,89 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+    - name: Task Recycle API Cartao Presente (Admin)
+      win_iis_webapppool:
+        name: admin.cartaopresente.com.br
+        state: restarted
+      tags: restarted
+
+    - name: Task Recycle API Cartao Presente
+      win_iis_webapppool:
+        name: cartaopresente.com.br
+        state: restarted
+      tags: restarted
+
+    - name: Task Recycle API Portal B2B (CNOVA)
+      win_iis_webapppool:
+        name: portalB2B.cnova.com
+        state: restarted
+      tags: restarted
+
+    - name: Task Recycle API Seguranca (NOVA)
+      win_iis_webapppool:
+        name: seguranca.nova.com
+        state: restarted
+      tags: restarted
+
+    - name: Task Recycle API Marketing B2B (NOVA)
+      win_iis_webapppool:
+        name: marketingb2b.nova.com
+        state: restarted
+      tags: restarted
+
+    - name: Task Recycle API CompreVIA.Net
+      win_iis_webapppool:
+        name: comprevia.net
+        state: restarted
+      tags: restarted
+
+    - name: Task Recycle API GestaoVIA.Net
+      win_iis_webapppool:
+        name: gestaovia.net
+        state: restarted
+      tags: restarted
+
+    - name: Task Recycle API B2B Mais Pontos
+      win_iis_webapppool:
+        name: api-b2b.maispontos.com.br
+        state: restarted
+      tags: restarted
+
+    - name: Task Recycle API Cotador B2B (CNOVA)
+      win_iis_webapppool:
+        name: cotador-b2b.api-cnova.com.br
+        state: restarted
+      tags: restarted
+
+    - name: Task Recycle API Workflow (CNOVA)
+      win_iis_webapppool:
+        name: workflow.api-cnova.com.br
+        state: restarted
+      tags: restarted
+
+    - name: Task Recycle API Corporativo B2B (CNOVA)
+      win_iis_webapppool:
+        name: corporativo-b2b.api-cnova.com.br
+        state: restarted
+      tags: restarted
+
+    - name: Task Recycle API Parceiros Fake B2B
+      win_iis_webapppool:
+        name: parceiros-fake-b2b.viavarejo.com.br
+        state: restarted
+      tags: restarted
+
+    - name: Task Recycle API Portal B2B 
+      win_iis_webapppool:
+        name: portalb2b.viavarejo.com.br
+        state: restarted
+      tags: restarted
+
+    - name: Task Recycle API Cotador B2B 
+      win_iis_webapppool:
+        name: cotador-b2b-api.viavarejo.com.br
+        state: restarted
+      tags: restarted
+
+...
