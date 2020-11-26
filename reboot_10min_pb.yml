@@ -1,0 +1,13 @@
+---
+- hosts: all
+  tasks:
+    - name: Assegurar que o WinRM atrasara apos subida do sistema operacional de forma confiavel
+      win_service:
+        name: WinRM
+        start_mode: delayed
+    
+    - name: Reboot apos aguardar por 10 minutos
+      win_reboot:
+        reboot_timeout: 600
+
+...
