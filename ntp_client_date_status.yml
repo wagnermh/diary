@@ -1,0 +1,10 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+   - name: Check Date on Windows Machine
+     raw: Get-Date
+     register: resultpwsh
+#   - debug: msg="{{resultpwsh}}"
+
+...
