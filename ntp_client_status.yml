@@ -1,0 +1,14 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+#   - name: Check if the service Status (W32Time) - Powershell
+#     raw: Get-Service W32Time -ErrorAction SilentlyContinue
+#     register: resultpwsh
+#   - debug: msg="{{resultpwsh}}"
+
+   - name: Status Service NTP Client
+     raw: w32tm /query /status
+     register: status
+#   - debug: msg="{{status}}"
+...

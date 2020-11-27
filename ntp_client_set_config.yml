@@ -1,0 +1,42 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+   - name: Check if the service Status (W32Time) - Powershell
+     raw: Get-Service W32Time -ErrorAction SilentlyContinue
+     register: resultpwsh
+   - debug: msg="{{resultpwsh}}"
+
+   - name: Set Config NTP Server on Infoblox
+     raw: w32tm /config /manualpeerlist:"10.128.8.75, 10.128.8.76" /syncfromflags:manual /reliable:yes /update
+     register: config
+   - debug: msg="{{config}}"
+
+   - name: Restart and Set Service Startup Mode Auto and Running - NTP Client
+     win_service:
+       name: W32Time
+       start_mode: auto
+       state: restarted
+
+   - name: Sync Service NTP Client
+     raw: w32tm /resync
+     register: sync
+   - debug: msg="{{sync}}"
+
+   - name: Status Service NTP Client
+     raw: w32tm /query /status
+     register: status
+   - debug: msg="{{status}}"
+
+   - name: Set Service Startup Mode Auto and Running - NTP Client
+     win_service:
+       name: W32Time
+       start_mode: auto
+       state: started
+
+   - name: Configuration Service NTP Client
+     raw: w32tm /query /configuration
+     register: configuration
+   - debug: msg="{{configuration}}"
+
+...

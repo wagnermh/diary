@@ -1,0 +1,9 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+   - name: Configuration Service NTP Client
+     raw: w32tm /query /configuration
+     register: configuration
+#   - debug: msg="{{configuration}}"
+...
