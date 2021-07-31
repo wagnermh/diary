@@ -1,6 +1,5 @@
 - hosts: all
-  vars: 
-   gather_facts: no
+  gather_facts: no
   tasks:
     - name: Restart iis server
       win_command: iisreset
