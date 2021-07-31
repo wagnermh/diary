@@ -1,7 +1,5 @@
 - hosts: all
-  vars: 
-   gather_facts: no
-   ansible_connection: local
+  gather_facts: no
   tasks: 
    - name: Verificando Variaveis
      fail: 
@@ -16,4 +14,4 @@
 - hosts: inputhosts
   tasks:
     - name: Restart iis server
-      win_shell: iisreset
+      win_command: iisreset
