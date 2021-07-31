@@ -1,0 +1,19 @@
+- hosts: all
+  vars: 
+   gather_facts: no
+   ansible_connection: local
+  tasks: 
+   - name: Verificando Variaveis
+     fail: 
+       msg: "Defina as variaveis Endereco e nome do servico"
+     when: host_addr == '' 
+
+   - name: Configurando Inventário
+     add_host:
+       name:  "{{host_addr}}"
+       group: "inputhosts"
+
+- hosts: inputhosts
+  tasks:
+    - name: Restart iis server
+      win_shell: iisreset
