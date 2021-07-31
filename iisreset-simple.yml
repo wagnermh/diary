@@ -4,4 +4,4 @@
    ansible_connection: local
   tasks:
     - name: Restart iis server
-      win_shell: iisreset
+      win_command: iisreset
